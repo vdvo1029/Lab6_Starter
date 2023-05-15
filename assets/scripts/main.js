@@ -88,6 +88,9 @@ function initFormHandler() {
   //            make this easier to read), and then extract the keys and corresponding
   //            values from the FormData object and insert them into recipeObject
     const recipeObject = {};
+    for (let [key, value] of formData.entries()) {
+      recipeObject[key] = value;
+    }
   // B6. TODO - Create a new <recipe-card> element
     const recipeCard = document.createElement('recipe-card');
   // B7. TODO - Add the recipeObject data to <recipe-card> using element.data
