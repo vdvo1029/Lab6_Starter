@@ -40,7 +40,7 @@ function addRecipesToDocument(recipes) {
   let maina = document.getElementsByTagName('main');
   let recipesa= getRecipesFromStorage();
   
-  for(let i = 0; i < recipes.length; i++){
+  for(let i = 0; i < recipesa.length; i++){
     let newcard = document.createElement('recipe-card');
     newcard.data=recipesa[i];
     //console.log(recipesa[i]);
