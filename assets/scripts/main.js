@@ -39,8 +39,11 @@ function getRecipesFromStorage() {
 function addRecipesToDocument(recipes) {
   let maina = document.getElementsByTagName('main');
   let recipesa= getRecipesFromStorage();
+  if(recipesa == null){
+    recipesa = [];
+  }
   
-  for(let i = 0; i < recipes.length; i++){
+  for(let i = 0; i < recipesa.length; i++){
     let newcard = document.createElement('recipe-card');
     newcard.data=recipesa[i];
     //console.log(recipesa[i]);
